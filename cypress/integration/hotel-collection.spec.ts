@@ -47,4 +47,13 @@ describe('Hotel collection specs', () => {
     cy.wait('@fetchHotels');
     cy.findAllByRole('listitem').should('have.length', 2);
   });
+
+  it('Custom Command - should fetch two hotels when visit /hotel-collection url', () => {
+    // Arrange
+
+    // Act
+    cy.loadAndVisit('/api/hotels', '/hotel-collection', 'fixture:hotels');
+
+    cy.findAllByRole('listitem').should('have.length', 2);
+  });
 });
