@@ -11,4 +11,4 @@ yarn.lock
 .awcache
 public
 cypress/videos
-cypress/screenhost
+cypress/screenshots
